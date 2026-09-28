@@ -133,7 +133,7 @@
 <p>All third-party SDK network traffic is encrypted in transit using HTTPS/TLS.</p>
 
 <h2>8. Permissions</h2>
-<p>The Game requests only the standard Android permissions <code>INTERNET</code> and <code>ACCESS_NETWORK_STATE</code>, required to load ads. If you use an upload feature that needs an image from your device, the Game may additionally request <code>READ_MEDIA_IMAGES</code> (Android 13+) or <code>READ_EXTERNAL_STORAGE</code> (older Android versions), and/or <code>CAMERA</code> if you choose to take a photo directly. These permissions are used only when you actively use that feature, and you can deny them without affecting the rest of the Game. No access to contacts, microphone, or precise location is requested.</p>
+<p>The Game requests only the standard Android permission <code>INTERNET</code>. It does <strong>not</strong> request <code>ACCESS_NETWORK_STATE</code>, the advertising-ID permission (<code>com.google.android.gms.permission.AD_ID</code>), or any other permission, because the current version contains no advertising SDK. If you use an upload feature that needs an image from your device, the Game may additionally request <code>READ_MEDIA_IMAGES</code> (Android 13+) or <code>READ_EXTERNAL_STORAGE</code> (older Android versions), and/or <code>CAMERA</code> if you choose to take a photo directly. These permissions are used only when you actively use that feature, and you can deny them without affecting the rest of the Game. No access to contacts, microphone, or precise location is requested.</p>
 
 <h2>9. Google Play Data Safety Declaration</h2>
 <p>For transparency, the following is what we declare in the Google Play Data Safety form for this app. For the current version (1.7.0), which contains no advertising SDK and no upload feature, <strong>no data is collected or shared</strong>; the rows below marked "No in current version" will be changed to "Yes" in the release that actually introduces advertising or uploads, at which point this page will be updated as well.</p>
@@ -147,7 +147,7 @@
   <tr><td>Precise location, contacts, photos/media not uploaded by you, audio, files</td><td><strong>No</strong></td><td>No</td><td>—</td></tr>
 </table>
 <ul>
-  <li><strong>Encryption in transit:</strong> Yes, all network traffic uses HTTPS/TLS.</li>
+  <li><strong>Encryption in transit:</strong> Not applicable to the current version (no data is transmitted); any future network traffic will use HTTPS/TLS.</li>
   <li><strong>Deletion request:</strong> Yes — email us and we will delete uploaded content and generated URLs.</li>
   <li><strong>Independent security review:</strong> No (self-assessed).</li>
 </ul>
